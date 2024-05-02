@@ -1,0 +1,11 @@
+sito per server arduino/static/img/
+sito per server arduino/.vscode
+sito per server arduino/node_modules
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
