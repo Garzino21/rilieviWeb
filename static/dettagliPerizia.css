@@ -443,3 +443,9 @@ height: 30px;
 table {
 	width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+	#dettagliPerizia {
+		overflow-x: scroll;
+	}
+}

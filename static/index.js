@@ -25,8 +25,6 @@ $(document).ready(async function () {
 	let _apriDettagli = $("#apriDettagli");
 	let _directions = $(".adp-directions").css("text-align", "center");
 
-
-
 	if (_mapPanel) {
 		_mapPanel.innerHTML = "";
 		_mapPanel.style.display = "none";
@@ -155,6 +153,9 @@ $(document).ready(async function () {
 		await disegnaMarcatori(position);
 		await disegnaQuartierGenerale(position);
 	});
+
+	if(window.location.search == "")	
+		cerca.trigger("click");
 
 	async function creaMappa() {
 		console.log(window.location.search);

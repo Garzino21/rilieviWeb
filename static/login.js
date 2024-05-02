@@ -20,7 +20,7 @@ $(document).ready(function () {
 	});
 
 
-	
+
 
 	function loginGoogle() {
 		/*global google*/
@@ -55,10 +55,13 @@ $(document).ready(function () {
 	}
 
 	$("#btnRecuperaPassword").on("click", function () {
-		let request = inviaRichiesta("POST", "/api/sendNewPassword", { "skipCheckToken": true });
+		let username = prompt("Inserisci la tua mail:");
+		let password = prompt("Inserisci la tua password:");
+
+		let request = inviaRichiesta("POST", "/api/cambiaPassword", { "username": username, "newPass": password });
 		request.catch(errore);
 		request.then((response) => {
-			alert("Mail inviata alla propria casella di posta elettronica");
+			swal("Password cambiata con successo", "", "success");
 		});
 	})
 
@@ -79,7 +82,7 @@ $(document).ready(function () {
 			_password.prev().addClass("icona-rossa");
 		}
 		else {
-			console.log("login"+ _username.val() + _password.val());
+			console.log("login" + _username.val() + _password.val());
 			let request = inviaRichiesta('POST', '/api/login', { "username": _username.val(), "password": _password.val() });
 			request.catch(function (err) {
 				console.log(err.response.status)

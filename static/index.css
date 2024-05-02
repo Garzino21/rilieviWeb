@@ -324,7 +324,7 @@ nav {
 	width: 50px;
 }
 
-.btnFont{
+.btnFont {
 	padding: 0 !important;
 	margin-bottom: 20px;
 	height: 30px;
@@ -356,12 +356,12 @@ nav {
 
 .input-group {
 	width: fit-content;
-	float: left ;
+	float: left;
 	height: 30px;
 }
 
 .form-outline {
-height: 30px;
+	height: 30px;
 }
 
 .search {
@@ -384,7 +384,7 @@ height: 30px;
 	text-align: center;
 }
 
-.btnNuovoUtente{
+.btnNuovoUtente {
 	margin: auto;
 	width: 40%;
 	height: 40px;
@@ -398,7 +398,7 @@ height: 30px;
 }
 
 #apriDettagli {
-	margin:0;
+	margin: 0;
 	width: 80%;
 	height: 40px;
 	font-size: 15pt;
@@ -417,12 +417,20 @@ height: 30px;
 }
 
 .adp-directions {
-	width: 100%;	
+	width: 100%;
 }
 
-#btnn{
+#btnn {
 	width: 80%;
-	padding: 10px;	
+	padding: 10px;
 	height: 35px;
-	padding-top: 0!important;
+	padding-top: 0 !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	#locate {
+		overflow-x: scroll;
+	}
 }
