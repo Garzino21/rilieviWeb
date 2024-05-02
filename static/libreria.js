@@ -2,7 +2,7 @@
 
 const _URL = ""
 const MAPS_URL = "https://maps.googleapis.com/maps/api"
-const JSONSERVER_URL = "http://localhost:3000"
+const JSONSERVER_URL = "https://rilieviweb.onrender.com/"
 const MAP_KEY = "AIzaSyBZKYgxbiyRE7DknUpnRP2QHCBVjvLgH7g";
 
 // Se vuota viene assegnata in automatico l'origine da cui è stata scaricata la pagina
