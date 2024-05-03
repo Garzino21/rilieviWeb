@@ -28,7 +28,7 @@ $(document).ready(async function () {
 				for (let foto of response.data.foto) {
 					$("<img>").prop("src", foto).css({"width":"200px"}).appendTo(content);
 				}
-				//$("<input>").prop({"disabled":true,"id":"commentoM"}).val(response.data.commento).css({"width":"80%"}).appendTo(content);
+				$("<input>").prop({"disabled":true,"id":"commentoM","value":response.data.commento}).css({"width":"80%"}).appendTo(content);
 
 				let sweetAlertOptions = {
 					"title": `FOTO DELLA PERIZIA DI ${response.data.username}`,
