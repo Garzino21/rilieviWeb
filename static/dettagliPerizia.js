@@ -22,13 +22,14 @@ $(document).ready(async function () {
 		let request = inviaRichiesta("POST", `/api/perizie/${id}`);
 		request.catch(errore);
 		request.then(async function (response) {
+			console.log(response);
 			$("<img>").prop("src", response.data.foto[0]).appendTo(_image).on("click", function () {
 				let content = $("<div>").css("text-align", "center");
 				$("<div>").css({"margin":"auto"}).appendTo(content);
 				for (let foto of response.data.foto) {
 					$("<img>").prop("src", foto).css({"width":"200px"}).appendTo(content);
 				}
-				$("<input>").prop({"disabled":true,"id":"commentoM","value":response.data.commento}).css({"width":"80%"}).appendTo(content);
+				$("<input>").prop({"id":"commentoM","value":response.data.commento}).css({"width":"80%"}).appendTo(content);
 
 				let sweetAlertOptions = {
 					"title": `FOTO DELLA PERIZIA DI ${response.data.username}`,
